@@ -1,0 +1,38 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --lightGrayishViolet: hsl(270, 3%, 87%);
+  --darkGrayishViolet: hsl(279, 6%, 55%);
+  --veryDarkViolet: hsl(278, 68%, 11%);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  height: 15em;
+  background: url(images/bg-main-mobile.png);
+}
+/* .bank-card {
+  height: 6em;
+  width: 18em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0.5em;
+} */
+
+.bank-card {
+  width: 18em;
+  height: 9em;
+}
+.bank-card-section {
+  position: relative;
+  display: inline-block;
+  width: 18em;
+  height: 9em;
+}
+.text {
+  position: absolute;
+  top: 4em;
+  right: 2em;
+  color: var(--white);
+}
