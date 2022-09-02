@@ -8,31 +8,43 @@
   margin: 0;
   padding: 0;
 }
+.back-view {
+  grid-column: 2/6;
+  grid-row: 1/5;
+  z-index: 0;
+}
+.front-view {
+  grid-column: 1/5;
+  grid-row: 4/7;
+  z-index: 1;
+}
 header {
-  height: 15em;
+  height: 10em;
   background: url(images/bg-main-mobile.png);
+  display: grid;
+  padding: 2em 1em;
 }
-/* .bank-card {
-  height: 6em;
-  width: 18em;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 0.5em;
-} */
 
-.bank-card {
-  width: 18em;
-  height: 9em;
+.bank-card-img {
+  width: 17em;
+  height: 8em;
 }
-.bank-card-section {
+.bank-card {
   position: relative;
   display: inline-block;
-  width: 18em;
-  height: 9em;
+  width: 17em;
+  height: 8em;
 }
-.text {
+#cvc {
   position: absolute;
-  top: 4em;
+  top: 3.5em;
   right: 2em;
+  color: var(--white);
+}
+
+#card-number {
+  position: absolute;
+  top: 4.5em;
+  left: 1em;
   color: var(--white);
 }
