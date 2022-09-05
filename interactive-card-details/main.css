@@ -76,3 +76,52 @@ header {
   left: 1em;
   width: 3.5em;
 }
+main {
+  margin-top: 4em;
+}
+.input {
+  font-size: 1rem;
+  display: block;
+  border-radius: 0.5em;
+  border: 1px solid var(--lightGrayishViolet);
+  padding: 0.75em;
+}
+.flex-form {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+input::placeholder {
+  color: var(--darkGrayishViolet);
+  letter-spacing: 0.05rem;
+}
+.flex-form label {
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.15rem;
+  color: var(--veryDarkViolet);
+}
+
+.details-container {
+  padding: 0.5em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#month-input,
+#day-input {
+  width: 2.5em;
+}
+#cvc-input {
+  width: 10.5em;
+}
+.btn {
+  margin: 1em 0;
+  color: var(--lightGrayishViolet);
+  padding: 1em;
+  font-size: 1rem;
+  background-color: var(--veryDarkViolet);
+  border: 1px solid var(--veryDarkViolet);
+  border-radius: 0.5em;
+}

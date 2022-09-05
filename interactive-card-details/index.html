@@ -51,10 +51,49 @@
       </div>
     </header>
 
-    <!-- <main>
-      Cardholder Name e.g. Jane Appleseed Card Number e.g. 1234 5678 9123 0000
-      Exp. Date (MM/YY) MM YY CVC e.g. 123 Confirm
-    </main> -->
+    <main>
+      <form action="myForm">
+        <div class="flex-form">
+          <label for="card-holder">Cardholder Name</label>
+          <input
+            class="input"
+            id="card-holder-input"
+            type="text"
+            placeholder="e.g. Jane Appleseed"
+          />
+          <label for="card-number-input">Card Number</label>
+          <input
+            class="input detail-input"
+            id="card-number-input"
+            type="number"
+            placeholder="e.g. 1234 5678 9123 0000"
+          />
+          <label>Exp. Date (MM/YY) CVC</label>
+          <div class="details-container">
+            <input
+              class="input detail-input"
+              id="month-input"
+              type="text"
+              placeholder="MM"
+            />
+            <input
+              class="input detail-input"
+              id="day-input"
+              type="text"
+              placeholder="YY"
+            />
+            <input
+              class="input detail-input"
+              id="cvc-input"
+              type="text"
+              placeholder="e.g. 123"
+            />
+          </div>
+          <button class="btn" type="Submit">Confirm</button>
+        </div>
+      </form>
+    </main>
+
     <!-- Completed state start -->
 
     <!-- Thank you! We've added your card details Continue -->
@@ -63,7 +102,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="https://github.com/AdamMzkr">AdamM</a>.
     </div>
   </body>
 </html>
