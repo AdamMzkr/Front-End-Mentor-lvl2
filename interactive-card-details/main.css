@@ -8,7 +8,13 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Space Grotesk", sans-serif;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
 }
 .back-view {
   grid-column: 2/6;
@@ -21,10 +27,14 @@
   z-index: 1;
   margin-top: 0.5em;
 }
+.grid {
+  display: grid;
+}
 header {
   height: 10em;
   background: url(images/bg-main-mobile.png);
-  display: grid;
+  background-size: cover;
+
   padding: 2em 1em;
 }
 
@@ -124,4 +134,65 @@ input::placeholder {
   background-color: var(--veryDarkViolet);
   border: 1px solid var(--veryDarkViolet);
   border-radius: 0.5em;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: relative;
+  top: 6em;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 600px) {
+  .main-container {
+    flex-direction: row;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 15em;
+    background: url(images/bg-main-desktop.png);
+    background-size: cover;
+    padding: 0 0 0 20em;
+  }
+  .bank-card-img {
+    width: 25em;
+    height: 14em;
+  }
+  .bank-card {
+    position: relative;
+    display: inline-block;
+    width: 17em;
+    height: 9em;
+    color: var(--white);
+  }
+  .grid {
+    height: 60em;
+    padding-top: 10em;
+  }
+
+  .front-view {
+    grid-column: 1/8;
+    grid-row: 1/6;
+    z-index: 0;
+  }
+  .back-view {
+    grid-column: 3/10;
+    grid-row: 3/7;
+    z-index: 1;
+    margin-top: 0.5em;
+  }
+  main {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
 }
