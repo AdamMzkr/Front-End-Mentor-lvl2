@@ -5,49 +5,55 @@
   --darkGrayishViolet: hsl(279, 6%, 55%);
   --veryDarkViolet: hsl(278, 68%, 11%);
 }
+/* reset margins and paddings */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  background: url(images/bg-main-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: "Space Grotesk", sans-serif;
+}
+main {
+  height: 95vh;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .main-container {
   display: flex;
   flex-direction: column;
 }
-.back-view {
-  grid-column: 2/6;
-  grid-row: 1/5;
-  z-index: 0;
+/* resize and positioned card image */
+.left {
+  width: 90%;
+  height: 20rem;
 }
-.front-view {
-  grid-column: 1/5;
-  grid-row: 3/7;
-  z-index: 1;
-  margin-top: 0.5em;
-}
-.grid {
-  display: grid;
-}
-header {
-  height: 10em;
-  background: url(images/bg-main-mobile.png);
-  background-size: cover;
-  padding: 2em 1em;
-}
-
 .bank-card-img {
-  width: 17em;
-  height: 9em;
+  width: 18rem;
+  height: 9rem;
 }
 .bank-card {
   position: relative;
   display: inline-block;
-  width: 17em;
-  height: 9em;
+  width: 18rem;
+  height: 9rem;
   color: var(--white);
 }
+.back-view {
+  margin: 1rem 0 0 6rem;
+}
+.front-view {
+  margin: -4rem 0 0 0;
+}
+/* positioned text on card image */
 #cvc {
   position: absolute;
   top: 5.75em;
@@ -85,9 +91,12 @@ header {
   left: 1em;
   width: 3.5em;
 }
-main {
-  margin-top: 7em;
+.right {
+  background-color: white;
+  height: 40rem;
+  margin: -5rem 0 0 0;
 }
+
 .input {
   font-size: 1rem;
   display: block;
@@ -145,7 +154,7 @@ input::placeholder {
   color: hsl(228, 45%, 44%);
 }
 
-@media only screen and (min-width: 600px) {
+/* @media only screen and (min-width: 600px) {
   .main-container {
     flex-direction: row;
   }
@@ -197,4 +206,4 @@ input::placeholder {
   .flex-form {
     width: 24em;
   }
-}
+} */
