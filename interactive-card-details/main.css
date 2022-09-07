@@ -37,21 +37,21 @@ main {
   height: 20rem;
 }
 .bank-card-img {
-  width: 18rem;
-  height: 9rem;
+  width: 19rem;
+  height: 10rem;
 }
 .bank-card {
   position: relative;
   display: inline-block;
-  width: 18rem;
-  height: 9rem;
+  width: 19rem;
+  height: 10rem;
   color: var(--white);
 }
 .back-view {
   margin: 1rem 0 0 6rem;
 }
 .front-view {
-  margin: -4rem 0 0 0;
+  margin: -4.5rem 0 0 0;
 }
 /* positioned text on card image */
 #cvc {
@@ -105,7 +105,8 @@ main {
   padding: 0.75em;
 }
 .flex-form {
-  padding: 1.5em;
+  margin: 3rem 0 0 0;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
 }
@@ -114,7 +115,7 @@ input::placeholder {
   letter-spacing: 0.05rem;
 }
 .flex-form label {
-  padding: 0.5em;
+  padding: 0.75rem;
   text-transform: uppercase;
   font-size: 0.7rem;
   letter-spacing: 0.15rem;
