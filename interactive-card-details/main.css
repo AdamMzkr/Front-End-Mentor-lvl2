@@ -18,9 +18,9 @@ body {
   font-family: "Space Grotesk", sans-serif;
 }
 main {
-  height: 95vh;
+  height: 100vh;
 }
-.flex-center {
+.flex-center-col {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,16 +35,18 @@ main {
 .left {
   width: 90%;
   height: 20rem;
+  display: flex;
+  flex-direction: column;
 }
 .bank-card-img {
-  width: 19rem;
-  height: 10rem;
+  width: 18rem;
+  height: 9.5rem;
 }
 .bank-card {
   position: relative;
   display: inline-block;
-  width: 19rem;
-  height: 10rem;
+  width: 18rem;
+  height: 9.5rem;
   color: var(--white);
 }
 .back-view {
@@ -58,21 +60,21 @@ main {
   position: absolute;
   top: 5.75em;
   font-size: 0.7rem;
-  right: 3em;
+  right: 3rem;
 }
 
 #card-number {
   position: absolute;
   font-size: 1.15rem;
   letter-spacing: 0.1rem;
-  top: 4.25em;
-  left: 1em;
+  top: 4.25rem;
+  left: 1rem;
 }
 
 #name {
   position: absolute;
-  top: 12em;
-  left: 2em;
+  top: 12rem;
+  left: 2rem;
   text-transform: uppercase;
   font-size: 0.6rem;
   letter-spacing: 0.1rem;
@@ -80,27 +82,29 @@ main {
 #experience-date {
   position: absolute;
   top: 12em;
-  right: 2em;
+  right: 2rem;
   text-transform: uppercase;
   font-size: 0.6rem;
   letter-spacing: 0.1rem;
 }
 #logo {
   position: absolute;
-  top: 1em;
-  left: 1em;
-  width: 3.5em;
+  top: 1rem;
+  left: 1rem;
+  width: 3.5rem;
 }
 .right {
+  display: flex;
+  justify-content: center;
   background-color: white;
-  height: 40rem;
+  height: 80vh;
   margin: -5rem 0 0 0;
 }
 
 .input {
   font-size: 1rem;
   display: block;
-  border-radius: 0.5em;
+  border-radius: 0.5rem;
   border: 1px solid var(--lightGrayishViolet);
   padding: 0.75em;
 }
@@ -123,88 +127,92 @@ input::placeholder {
 }
 
 .details-container {
-  padding: 0.5em 0;
+  padding: 0.5rem 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 #month-input,
 #day-input {
-  width: 4em;
+  width: 22.5%;
 }
 #cvc-input {
-  width: 10.5em;
+  width: 50%;
 }
 .btn {
-  margin: 1em 0;
+  margin: 2rem 0;
   color: var(--lightGrayishViolet);
-  padding: 1em;
-  font-size: 1rem;
+  padding: 1rem;
+  font-size: 1rrem;
   background-color: var(--veryDarkViolet);
   border: 1px solid var(--veryDarkViolet);
-  border-radius: 0.5em;
+  border-radius: 0.5rem;
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 1rem;
   text-align: center;
   position: relative;
-  top: 6em;
+  top: 6rem;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-
-/* @media only screen and (min-width: 600px) {
-  .main-container {
-    flex-direction: row;
-  }
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 15em;
-    background: url(images/bg-main-desktop.png);
-    background-size: cover;
-    padding: 0 5em 0 20em;
-  }
+@media only screen and (min-width: 768px) {
   .bank-card-img {
-    width: 25em;
-    height: 14em;
+    width: 21rem;
+    height: 11rem;
   }
   .bank-card {
     position: relative;
     display: inline-block;
-    width: 17em;
-    height: 9em;
-    color: var(--white);
+    width: 21rem;
+    height: 11rem;
   }
-  .grid {
-    height: 50em;
-    padding-top: 10em;
-  }
+}
 
-  .front-view {
-    grid-column: 1/6;
-    grid-row: 1/6;
-    z-index: 0;
+@media only screen and (min-width: 1024px) {
+  body {
+    background: url(images/bg-main-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
-  .back-view {
-    grid-column: 3/8;
-    grid-row: 4/8;
-    z-index: 1;
-    margin-top: 0.5em;
+  .main-container {
+    flex-direction: row;
   }
-  main {
-    margin: 0;
+  .right {
     display: flex;
-    height: 100vh;
-    width: 100%;
+    justify-content: center;
     align-items: center;
-    margin-left: 25em;
+    height: 100vh;
+    width: 70%;
+    margin: 0;
   }
   .flex-form {
-    width: 24em;
+    width: 25rem;
+    margin: 0 0 0 15rem;
   }
-} */
+  .left {
+    padding: 0 0 0 20%;
+    height: 100vh;
+    width: 30%;
+  }
+  .bank-card-img {
+    width: 26rem;
+    height: 15rem;
+  }
+  .bank-card {
+    position: relative;
+    display: inline-block;
+    width: 26rem;
+    height: 15rem;
+  }
+  .back-view {
+    order: 1;
+    margin: 4rem 0 0 10rem;
+  }
+  .front-view {
+    margin: 0 0 0 0;
+    order: 0;
+  }
+}
