@@ -14,13 +14,15 @@
 
     <title>Frontend Mentor | Interactive card details form</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- custom style css -->
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <main>
+      <!-- main form-container -->
       <div class="main-container">
-        <div class="left flex-center-col">
+        <!--div left-->
+        <div class="left flex">
           <div class="bank-card back-view">
             <img
               class="bank-card-img"
@@ -43,9 +45,15 @@
             <span id="experience-date">00/00</span>
           </div>
         </div>
-        <div class="right">
+        <!-- /.left-->
+
+        <!--div right-->
+        <div class="right flex">
+          <!--form-->
           <form action="myForm">
-            <div class="flex-form">
+            <!--form-container-->
+            <div class="form-container">
+              <!--name-->
               <label for="card-holder">Cardholder Name</label>
               <input
                 class="input"
@@ -53,6 +61,7 @@
                 type="text"
                 placeholder="e.g. Jane Appleseed"
               />
+              <!-- card-number -->
               <label for="card-number-input">Card Number</label>
               <input
                 class="input detail-input"
@@ -60,6 +69,7 @@
                 type="number"
                 placeholder="e.g. 1234 5678 9123 0000"
               />
+              <!--exp date and cvc-->
               <label>Exp. Date (MM/YY) CVC</label>
               <div class="details-container">
                 <input
@@ -83,9 +93,19 @@
               </div>
               <button class="btn" type="Submit">Confirm</button>
             </div>
+            <!--/.form-container-->
           </form>
+          <!--/form-->
         </div>
+        <!--/.right-->
       </div>
+      <!--/.main-container-->
     </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/AdamMzkr">AdamM</a>.
+    </footer>
   </body>
 </html>
