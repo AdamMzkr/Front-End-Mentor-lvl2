@@ -41,7 +41,8 @@ validateNotEmpty = (input, error) => {
   return valid;
 };
 
-    const regName = new RegExp("^[a-zA-Z]+ [a-zA-Z]+$");
+validateName = (input, error) => {
+  const regName = new RegExp("^[a-zA-Z]+ [a-zA-Z]+$");
 
   if (!regName.test(input.value)) {
     error.textContent = "Please enter your full name (first & last name).";

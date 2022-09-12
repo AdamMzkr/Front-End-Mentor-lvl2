@@ -106,7 +106,6 @@ main {
   border-radius: 0.5rem;
   border: 1px solid var(--lightGrayishViolet);
   padding: 0.75em;
-  margin: 0.5rem 0;
 }
 .form-container {
   margin: 0.5rem 0 0 0;
@@ -117,7 +116,8 @@ input::placeholder {
   letter-spacing: 0.05rem;
 }
 .form-container label {
-  margin: 1rem 0;
+  display: block;
+  margin: 1.5rem 0 0.25rem 0 !important;
   text-transform: uppercase;
   font-size: 0.7rem;
   letter-spacing: 0.15rem;
@@ -279,4 +279,22 @@ input::placeholder {
     left: 2rem;
     width: 5rem;
   }
+}
+/***** error  mesages*****/
+
+.errorMes {
+  color: red;
+  display: none;
+  font-size: 0.6rem;
+}
+
+.visible {
+  display: block;
+  border-color: red;
+}
+.error {
+  border: 1px solid red;
+}
+.valid {
+  border: 1px solid green;
 }
