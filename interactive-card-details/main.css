@@ -73,7 +73,7 @@ main {
   left: 1rem;
 }
 
-#experience-date,
+#exp-date,
 #name {
   position: absolute;
   top: 7.5rem;
@@ -131,7 +131,7 @@ input::placeholder {
   justify-content: space-between;
 }
 #month-input,
-#day-input {
+#year-input {
   width: 22.5%;
 }
 #cvc-input {
@@ -182,7 +182,7 @@ input::placeholder {
     left: 1.5rem;
   }
 
-  #experience-date,
+  #exp-date,
   #name {
     top: 8.75rem;
     right: 2rem;
@@ -258,7 +258,7 @@ input::placeholder {
     left: 2rem;
   }
 
-  #experience-date,
+  #exp-date,
   #name {
     top: 12rem;
     right: 2rem;
