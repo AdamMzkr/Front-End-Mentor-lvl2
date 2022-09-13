@@ -17,10 +17,20 @@ const cvc = document.querySelector("#cvc");
 
 const errorMesages = document.querySelectorAll(".errorMes");
 
+//format cardNUmber
+const format = (num) => {
+  try {
+    let newNum = num.match(/.{1,4}/g).join(" ");
+    return newNum;
+  } catch (e) {
+    console.error("empty number");
+  }
+};
+
 // if edited anyone of imput make action
 numberInput.addEventListener("input", (e) => {
   validateCardNumber(numberInput, errorMesages[1]);
-  number.textContent = numberInput.value;
+  number.textContent = format(numberInput.value);
 });
 
 nameInput.addEventListener("input", (e) => {
