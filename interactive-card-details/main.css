@@ -130,11 +130,16 @@ input::placeholder {
   flex-direction: row;
   justify-content: space-between;
 }
-#month-input,
-#year-input {
+.input-area {
+  width: 100%;
+  display: block;
+}
+
+.input-area:nth-child(1),
+.input-area:nth-child(2) {
   width: 22.5%;
 }
-#cvc-input {
+.input-area:last-child {
   width: 50%;
 }
 .btn {
