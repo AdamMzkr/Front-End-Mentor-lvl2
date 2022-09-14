@@ -297,6 +297,9 @@ input::placeholder {
   display: block;
   border-color: red;
 }
+.hidden {
+  display: none;
+}
 .error {
   border: 1px solid red;
 }

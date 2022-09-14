@@ -15,7 +15,10 @@ const yearExp = document.querySelector("#exp-year");
 const cvcInput = document.querySelector("#cvc-input");
 const cvc = document.querySelector("#cvc");
 
+const confirmDiv = document.querySelector("#confirm");
+
 const errorMesages = document.querySelectorAll(".errorMes");
+const inputsArr = document.querySelectorAll("input");
 
 //format cardNUmber
 const format = (num) => {
@@ -26,6 +29,18 @@ const format = (num) => {
     console.error("empty number");
   }
 };
+
+myForm.addEventListener("submit", (e) => {
+  for (let i = 0; i < inputsArr.length; i++) {
+    if (validateNotEmpty(inputsArr[i], errorMesages[i])) {
+      confirmDiv.classList.toggle("hidden");
+      myForm.classList.add("hidden");
+    } else {
+      validateNotEmpty(inputsArr[i], errorMesages[i]);
+      console.log("fill inputs");
+    }
+  }
+});
 
 // if edited anyone of imput make action
 numberInput.addEventListener("input", (e) => {
@@ -58,7 +73,7 @@ const inValid = (input, error) => {
   input.classList.add("error");
 };
 //if data valis remove error mesage and change to green border
-const valid = (input, error) => {
+const validData = (input, error) => {
   error.classList.remove("visible");
   input.classList.remove("error");
   input.classList.add("valid");
@@ -69,8 +84,9 @@ const validateNotEmpty = (input, error) => {
   if (!input.value) {
     inValid(input, error);
     input.placeholder = "";
+    valid = false;
   } else {
-    valid(input, error);
+    validData(input, error);
   }
   return valid;
 };
@@ -83,7 +99,7 @@ const validateName = (input, error) => {
     inValid(input, error);
     return false;
   } else {
-    valid(input, error);
+    validData(input, error);
     return true;
   }
 };
@@ -94,7 +110,7 @@ const validateCardNumber = (input, error) => {
     inValid(input, error);
     return false;
   } else {
-    valid(input, error);
+    validData(input, error);
     return true;
   }
 };
@@ -116,7 +132,7 @@ const validateYear = (input, error) => {
     inValid(input, error);
     return false;
   } else {
-    valid(input, error);
+    validData(input, error);
     return true;
   }
 };
@@ -128,7 +144,7 @@ const validateCVC = (input, error) => {
     inValid(input, error);
     return false;
   } else {
-    valid(input, error);
+    validData(input, error);
     return true;
   }
 };
