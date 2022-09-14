@@ -31,14 +31,30 @@ const format = (num) => {
 };
 
 myForm.addEventListener("submit", (e) => {
+  let arrValid = [];
+  let validAll = true;
   for (let i = 0; i < inputsArr.length; i++) {
     if (validateNotEmpty(inputsArr[i], errorMesages[i])) {
-      confirmDiv.classList.toggle("hidden");
-      myForm.classList.add("hidden");
+      arrValid[i] = validateNotEmpty(inputsArr[i], errorMesages[i]);
+      console.log("is not empty");
     } else {
       validateNotEmpty(inputsArr[i], errorMesages[i]);
       console.log("fill inputs");
+      myForm.classList.remove("hidden");
+      arrValid[i] = validateNotEmpty(inputsArr[i], errorMesages[i]);
     }
+  }
+  arrValid.forEach((el) => {
+    if (el === false) {
+      validAll = false;
+      console.log(el);
+    }
+  });
+  console.log("last validAll " + validAll);
+
+  if (validAll) {
+    myForm.classList.toggle("hidden");
+    confirmDiv.classList.toggle("hidden");
   }
 });
 
@@ -86,22 +102,21 @@ const validateNotEmpty = (input, error) => {
     input.placeholder = "";
     valid = false;
   } else {
-    validData(input, error);
   }
   return valid;
 };
 //validate appropriate inputs with
 const validateName = (input, error) => {
   const regName = new RegExp("^[a-zA-Z]+ [a-zA-Z]+$");
-
+  let valid = true;
   if (!regName.test(input.value)) {
     error.textContent = "Please enter your full name (first & last name).";
     inValid(input, error);
-    return false;
+    valid = false;
   } else {
     validData(input, error);
-    return true;
   }
+  return valid;
 };
 const validateCardNumber = (input, error) => {
   const regCard = new RegExp("^[0-9]{13,19}$");
@@ -121,7 +136,7 @@ const validateMonth = (input, error) => {
     inValid(input, error);
     return false;
   } else {
-    valid(input, error);
+    validData(input, error);
     return true;
   }
 };
@@ -140,7 +155,7 @@ const validateYear = (input, error) => {
 const validateCVC = (input, error) => {
   const regCVC = new RegExp("^[0-9][0-9][0-9]$");
   if (!regCVC.test(input.value)) {
-    error.textContent = "number only";
+    error.textContent = " 3 number only";
     inValid(input, error);
     return false;
   } else {
