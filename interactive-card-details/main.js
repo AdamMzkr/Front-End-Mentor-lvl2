@@ -19,6 +19,9 @@ const confirmDiv = document.querySelector("#confirm");
 
 const errorMesages = document.querySelectorAll(".errorMes");
 const inputsArr = document.querySelectorAll("input");
+/* global variable to check is empty and valid*/
+let isValid = [];
+let isEmpty = true;
 
 //format cardNUmber
 const format = (num) => {
@@ -31,28 +34,24 @@ const format = (num) => {
 };
 
 myForm.addEventListener("submit", (e) => {
-  let arrValid = [];
-  let validAll = true;
+  let isValidAll = false;
   for (let i = 0; i < inputsArr.length; i++) {
     if (validateNotEmpty(inputsArr[i], errorMesages[i])) {
-      arrValid[i] = validateNotEmpty(inputsArr[i], errorMesages[i]);
-      console.log("is not empty");
+      isEmpty = true;
     } else {
       validateNotEmpty(inputsArr[i], errorMesages[i]);
-      console.log("fill inputs");
-      myForm.classList.remove("hidden");
-      arrValid[i] = validateNotEmpty(inputsArr[i], errorMesages[i]);
+      isEmpty = false;
     }
   }
-  arrValid.forEach((el) => {
-    if (el === false) {
-      validAll = false;
-      console.log(el);
-    }
-  });
-  console.log("last validAll " + validAll);
 
-  if (validAll) {
+  isValid.forEach((el) => {
+    if (!isEmpty && el) {
+      console.log(`isValid=${el} is empty=${isEmpty}`);
+      isValidAll = true;
+    } else console.log(`isValid=${el} is empty=${isEmpty}`);
+  });
+  if (isValidAll) {
+    console.log(`all data valid ${isValidAll}`);
     myForm.classList.toggle("hidden");
     confirmDiv.classList.toggle("hidden");
   }
@@ -92,74 +91,80 @@ const inValid = (input, error) => {
 const validData = (input, error) => {
   error.classList.remove("visible");
   input.classList.remove("error");
-  input.classList.add("valid");
+  // input.classList.add("valid");
 };
 //validate if is empty
 const validateNotEmpty = (input, error) => {
-  let valid = true;
   if (!input.value) {
     inValid(input, error);
     input.placeholder = "";
-    valid = false;
+    isEmpty = true;
   } else {
+    isEmpty = false;
   }
-  return valid;
+  console.log("isEmpty =" + isEmpty);
+  return isEmpty;
 };
 //validate appropriate inputs with
 const validateName = (input, error) => {
   const regName = new RegExp("^[a-zA-Z]+ [a-zA-Z]+$");
-  let valid = true;
   if (!regName.test(input.value)) {
     error.textContent = "Please enter your full name (first & last name).";
     inValid(input, error);
-    valid = false;
+    isValid[0] = false;
   } else {
     validData(input, error);
+    isValid[0] = true;
   }
-  return valid;
+  return isValid[0];
 };
 const validateCardNumber = (input, error) => {
   const regCard = new RegExp("^[0-9]{13,19}$");
   if (!regCard.test(input.value)) {
     error.textContent = "Wrong format, numbers only. ";
     inValid(input, error);
-    return false;
+    isValid[1] = false;
   } else {
     validData(input, error);
-    return true;
+    isValid[1] = true;
   }
+  return isValid[1];
 };
 const validateMonth = (input, error) => {
   const regMonth = new RegExp("^0[1-9]|1[0-2]$");
   if (!regMonth.test(input.value)) {
-    error.textContent = "invalid month";
+    error.textContent = "invalid month number 1-12";
     inValid(input, error);
-    return false;
+    isValid[2] = false;
   } else {
     validData(input, error);
-    return true;
+    isValid[2] = true;
   }
+  return isValid[2];
 };
 const validateYear = (input, error) => {
   const regYear = new RegExp("^[2-9][0-9]$");
   if (!regYear.test(input.value)) {
-    error.textContent = "invalid year";
+    error.textContent = "invalid year, number > 20";
     inValid(input, error);
-    return false;
+    isValid[3] = false;
   } else {
     validData(input, error);
-    return true;
+    isValid[3] = true;
   }
+  return isValid[3];
 };
 
 const validateCVC = (input, error) => {
   const regCVC = new RegExp("^[0-9][0-9][0-9]$");
   if (!regCVC.test(input.value)) {
-    error.textContent = " 3 number only";
+    error.textContent = "3 number only";
     inValid(input, error);
-    return false;
+    isValid[4] = false;
   } else {
     validData(input, error);
-    return true;
+    isValid[4] = true;
   }
+  console.log("cvc " + isValid[4]);
+  return isValid[4];
 };
