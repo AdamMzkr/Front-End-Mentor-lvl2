@@ -5,6 +5,7 @@
   --lightGrayishViolet: hsl(270, 3%, 87%);
   --darkGrayishViolet: hsl(279, 6%, 55%);
   --veryDarkViolet: hsl(278, 68%, 11%);
+  --veryDarkVioletBTN: hsl(278, 70%, 25%);
 }
 /*** reset margins and paddings ***/
 * {
@@ -20,7 +21,7 @@ body {
   font-family: "Space Grotesk", sans-serif;
 }
 main {
-  height: 100vh;
+  height: 100%;
 }
 .flex {
   display: flex;
@@ -153,6 +154,22 @@ input::placeholder {
   background-color: var(--veryDarkViolet);
   border: 1px solid var(--veryDarkViolet);
   border-radius: 0.5rem;
+  transition: 0.25s;
+}
+.btn:hover {
+  background-color: var(--veryDarkVioletBTN);
+}
+/***** confirm div style****/
+#confirm {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  width: 15rem;
+  align-items: center;
+}
+
+#confirm img {
+  width: 5rem;
+  margin: 1rem 0;
 }
 
 .attribution {
@@ -290,7 +307,7 @@ input::placeholder {
 .errorMes {
   color: red;
   display: none;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
 }
 
 .visible {

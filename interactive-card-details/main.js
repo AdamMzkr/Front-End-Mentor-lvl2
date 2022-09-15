@@ -16,6 +16,7 @@ const cvcInput = document.querySelector("#cvc-input");
 const cvc = document.querySelector("#cvc");
 
 const confirmDiv = document.querySelector("#confirm");
+const continueBtn = document.querySelector("#continue");
 
 const errorMesages = document.querySelectorAll(".errorMes");
 const inputsArr = document.querySelectorAll("input");
@@ -32,10 +33,11 @@ const format = (num) => {
     console.error("empty number");
   }
 };
-
+//submited form and check all data is valid
 myForm.addEventListener("submit", (e) => {
   for (let i = 0; i < inputsArr.length; i++) {
     if (validateNotEmpty(inputsArr[i], errorMesages[i])) {
+      isValid[i] = false;
       isEmpty = true;
     } else {
       validateNotEmpty(inputsArr[i], errorMesages[i]);
@@ -44,7 +46,7 @@ myForm.addEventListener("submit", (e) => {
   }
 
   isValid.forEach((el) => {
-    console.log(`isValid=${el} is empty=${isEmpty}`);
+    console.log(`isValid=${el}`);
   });
 
   if (!isValid.includes(false)) {
@@ -79,6 +81,25 @@ cvcInput.addEventListener("input", (e) => {
   cvc.textContent = cvcInput.value;
   validateCVC(cvcInput, errorMesages[4]);
 });
+
+//if clicked continue button reset all inputs
+continueBtn.addEventListener("click", (e) => {
+  reset();
+  myForm.classList.toggle("hidden");
+  confirmDiv.classList.toggle("hidden");
+});
+
+const reset = () => {
+  inputsArr.forEach((input) => {
+    input.classList.remove("valid");
+  });
+  numberInput.value = "";
+  nameInput.value = "";
+  monthInput.value = "";
+  yearInput.value = "";
+  cvcInput.value = "";
+};
+
 //if data invalid add error mesage and  red border
 const inValid = (input, error) => {
   error.classList.add("visible");
@@ -88,7 +109,7 @@ const inValid = (input, error) => {
 const validData = (input, error) => {
   error.classList.remove("visible");
   input.classList.remove("error");
-  // input.classList.add("valid");
+  input.classList.add("valid");
 };
 //validate if is empty
 const validateNotEmpty = (input, error) => {
@@ -102,6 +123,7 @@ const validateNotEmpty = (input, error) => {
   console.log("isEmpty =" + isEmpty);
   return isEmpty;
 };
+
 //validate appropriate inputs with
 const validateName = (input, error) => {
   const regName = new RegExp("^[a-zA-Z]+ [a-zA-Z]+$");
@@ -115,6 +137,7 @@ const validateName = (input, error) => {
   }
   return isValid[0];
 };
+
 const validateCardNumber = (input, error) => {
   const regCard = new RegExp("^[0-9]{13,19}$");
   if (!regCard.test(input.value)) {
@@ -127,6 +150,7 @@ const validateCardNumber = (input, error) => {
   }
   return isValid[1];
 };
+
 const validateMonth = (input, error) => {
   const regMonth = new RegExp("^0[1-9]|1[0-2]$");
   if (!regMonth.test(input.value)) {
@@ -139,6 +163,7 @@ const validateMonth = (input, error) => {
   }
   return isValid[2];
 };
+
 const validateYear = (input, error) => {
   const regYear = new RegExp("^[2-9][0-9]$");
   if (!regYear.test(input.value)) {
