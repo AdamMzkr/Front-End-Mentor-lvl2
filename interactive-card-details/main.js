@@ -20,7 +20,7 @@ const confirmDiv = document.querySelector("#confirm");
 const errorMesages = document.querySelectorAll(".errorMes");
 const inputsArr = document.querySelectorAll("input");
 /* global variable to check is empty and valid*/
-let isValid = [];
+let isValid = [false];
 let isEmpty = true;
 
 //format cardNUmber
@@ -34,7 +34,6 @@ const format = (num) => {
 };
 
 myForm.addEventListener("submit", (e) => {
-  let isValidAll = false;
   for (let i = 0; i < inputsArr.length; i++) {
     if (validateNotEmpty(inputsArr[i], errorMesages[i])) {
       isEmpty = true;
@@ -45,13 +44,11 @@ myForm.addEventListener("submit", (e) => {
   }
 
   isValid.forEach((el) => {
-    if (!isEmpty && el) {
-      console.log(`isValid=${el} is empty=${isEmpty}`);
-      isValidAll = true;
-    } else console.log(`isValid=${el} is empty=${isEmpty}`);
+    console.log(`isValid=${el} is empty=${isEmpty}`);
   });
-  if (isValidAll) {
-    console.log(`all data valid ${isValidAll}`);
+
+  if (!isValid.includes(false)) {
+    console.log(`all data valid ${!isValid.includes(false)}`);
     myForm.classList.toggle("hidden");
     confirmDiv.classList.toggle("hidden");
   }
