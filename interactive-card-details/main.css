@@ -13,6 +13,31 @@
   padding: 0;
   box-sizing: border-box;
 }
+/**** animations ******/
+@keyframes right-move {
+  0% {
+    right: -250px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+@keyframes left-move {
+  0% {
+    left: -250px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@keyframes top-move {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
 /***** main style *****/
 body {
   background: url(images/bg-main-mobile.png);
@@ -54,9 +79,11 @@ main {
 }
 .back-view {
   margin: 1rem 0 0 6rem;
+  animation: right-move 1s;
 }
 .front-view {
   margin: -4.25rem 0 0 0;
+  animation: left-move 1s;
 }
 /*****positioned text on card image (mobile size) *****/
 #cvc {
@@ -162,9 +189,15 @@ input::placeholder {
 /***** confirm div style****/
 #confirm {
   text-transform: uppercase;
-  font-size: 1.5rem;
   width: 15rem;
   align-items: center;
+  animation: top-move 1s;
+}
+#confirm span {
+  color: var(--darkGrayishViolet);
+  text-transform: none;
+  font-size: 1rem;
+  margin: 0.75rem 0;
 }
 
 #confirm img {

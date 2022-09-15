@@ -120,7 +120,6 @@ const validateNotEmpty = (input, error) => {
   } else {
     isEmpty = false;
   }
-  console.log("isEmpty =" + isEmpty);
   return isEmpty;
 };
 
@@ -187,6 +186,5 @@ const validateCVC = (input, error) => {
     validData(input, error);
     isValid[4] = true;
   }
-  console.log("cvc " + isValid[4]);
   return isValid[4];
 };
