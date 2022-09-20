@@ -25,6 +25,7 @@ Fill in the form and see the card details update in real-time
 
 ### Screenshot
 ![](images/full-view.png)
+![](images/full-page.png)
 
 ### Links 
 
