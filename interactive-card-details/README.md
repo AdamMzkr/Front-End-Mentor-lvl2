@@ -24,8 +24,11 @@ Fill in the form and see the card details update in real-time
 - See hover, active, and focus states for interactive elements on the page
 
 ### Screenshot
-![](images/full-view.png)
 ![](images/full-page.png)
+
+-state complete and mobile view with validation
+![](images/full-view.png)
+
 
 ### Links 
 
