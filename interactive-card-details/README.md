@@ -1,5 +1,3 @@
-see-live->>[https://adammzkr.github.io/Front-End-Mentor-lvl2/interactive-card-details/index.html]
-
 # Frontend Mentor lv2 - Interactive card details form
 
 This is a solution to the [Interactive card details form](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). 
@@ -26,7 +24,7 @@ Fill in the form and see the card details update in real-time
 - See hover, active, and focus states for interactive elements on the page
 
 ### Screenshot
-![]will soon apears
+![](images/full-view.png)
 
 ### Links 
 
