@@ -1,0 +1,94 @@
+/* define colors */
+:root {
+  --softRed: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+
+  --darkBown: hsl(25, 47%, 15%);
+  --mediumBrown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --veryPaleOrange: hsl(33, 100%, 98%);
+}
+/* reset amrgins and paddings of all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 0.5px solid gray; */
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+body {
+  background-color: var(--cream);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-container {
+  width: 20rem;
+}
+header {
+  background-color: var(--softRed);
+  color: var(--veryPaleOrange);
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  margin: 0 0 1rem 0;
+}
+header h1 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+header strong {
+  font-size: 1.5rem;
+}
+.logo {
+  width: 3.5rem;
+}
+.chart-container {
+  background-color: var(--veryPaleOrange);
+  color: var(--mediumBrown);
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+.chart-title {
+  color: var(--darkBown);
+}
+.chart {
+  height: 10rem;
+  border-bottom: 2px solid var(--cream);
+  margin: 0 0 1rem 0;
+}
+.left-data h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--mediumBrown);
+}
+.left-data strong {
+  font-size: 1.75rem;
+  color: var(--darkBown);
+}
+
+.right-data strong {
+  padding: 0.75rem 0 0 0;
+  font-size: 1rem;
+  display: block;
+  color: var(--darkBown);
+  text-align: right;
+}
+
+/* footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
