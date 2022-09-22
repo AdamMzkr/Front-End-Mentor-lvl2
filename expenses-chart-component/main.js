@@ -49,6 +49,23 @@ const config = {
   type: "bar",
   data: data,
   options: {
+    scales: {
+      y: {
+        grid: {
+          display: false,
+        },
+        ticks: {
+          display: false,
+        },
+        color: "hsl(33, 100%, 98%)",
+      },
+
+      x: {
+        grid: {
+          display: false,
+        },
+      },
+    },
     plugins: {
       legend: {
         display: false,
@@ -56,5 +73,5 @@ const config = {
     },
   },
 };
-// };
+
 const myChart = new Chart(document.getElementById("myChart"), config);

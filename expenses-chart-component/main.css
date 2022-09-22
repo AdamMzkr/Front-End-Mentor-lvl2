@@ -65,6 +65,7 @@ header strong {
   height: 15rem;
   border-bottom: 2px solid var(--cream);
   margin: 0 0 1rem 0;
+  padding: 2rem 0 0 0;
 }
 #myChart {
   height: 200px !important;
