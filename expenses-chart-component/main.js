@@ -40,7 +40,10 @@ const data = {
   datasets: [
     {
       data: amountArr,
-      backgroundColor: "hsl(186, 34%, 60%)",
+      backgroundColor: "hsl(10, 79%, 65%)",
+      hoverBackgroundColor: "hsl(186, 34%, 60%)",
+      borderRadius: 4,
+      borderSkipped: false,
     },
   ],
 };
@@ -57,13 +60,13 @@ const config = {
         ticks: {
           display: false,
         },
-        color: "hsl(33, 100%, 98%)",
       },
 
       x: {
         grid: {
           display: false,
         },
+        ticks: {},
       },
     },
     plugins: {
