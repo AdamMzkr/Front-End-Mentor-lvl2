@@ -96,7 +96,8 @@ header strong {
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--softRed);
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 600px) {
