@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <!-- 
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    /> -->
+
+    <title>Frontend Mentor | Notifications page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <header class="f-row">
+          <h2>Notifications <span id="counter">3</span></h2>
+
+          <span id="done">Mark all as read</span>
+        </header>
+        <section id="messages">
+          <article class="new-message f-row">
+            <div class="img"></div>
+            <div class="text">
+              <a class="user" href="#">Mark Webber</a> reacted to your recent
+              post
+              <a class="commented" a href="#">My first tournament today!</a>
+              <span class="time">1m ago</span>
+            </div>
+          </article>
+
+          <article class="new-message">Angela Gray followed you 5m ago</article>
+          <article class="new-message">
+            Jacob Thompson has joined your group Chess Club 1 day ago
+          </article>
+          <article>
+            Rizky Hasanuddin sent you a private message 5 days ago
+            <p>
+              Hello, thanks for setting up the Chess Club. I've been a member
+              for a few weeks now and I'm already having lots of fun and
+              improving my game.
+            </p>
+          </article>
+          <article>Kimberly Smith commented on your picture 1 week ago</article>
+
+          <article>
+            Nathan Peterson reacted to your recent post 5 end-game strategies to
+            increase your win rate 2 weeks ago
+          </article>
+
+          <article>Anna Kim left the group Chess Club 2 weeks ago</article>
+        </section>
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
