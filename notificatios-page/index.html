@@ -4,75 +4,146 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-    <!-- 
+
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
-    /> -->
+    />
 
     <title>Frontend Mentor | Notifications page</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <link rel="stylesheet" href="main.css" />
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <main>
       <div class="container">
         <header class="f-row">
-          <h2>Notifications <span id="counter">3</span></h2>
-
+          <h1>Notifications <span id="counter">3</span></h1>
           <span id="done">Mark all as read</span>
         </header>
+        <!-- section with messages -->
         <section id="messages">
-          <article class="new-message f-row">
-            <div class="img"></div>
+          <!-- 1st message -->
+          <article class="message new f-row">
+            <img
+              class="img"
+              src="images/avatar-mark-webber.webp"
+              alt="Marc avatar"
+            />
             <div class="text">
               <a class="user" href="#">Mark Webber</a> reacted to your recent
-              post
-              <a class="commented" a href="#">My first tournament today!</a>
+              post <a class="post" a href="#">My first tournament today!</a>
+              <div class="dot"></div>
+
               <span class="time">1m ago</span>
             </div>
           </article>
+          <!-- 2nd message -->
+          <article class="message new f-row">
+            <img
+              class="img"
+              src="images/avatar-angela-gray.webp"
+              alt="Angela avatar"
+            />
+            <div class="text">
+              <a class="user" href="#">Angela</a> followed you
+              <div class="dot"></div>
 
-          <article class="new-message">Angela Gray followed you 5m ago</article>
-          <article class="new-message">
-            Jacob Thompson has joined your group Chess Club 1 day ago
+              <span class="time">5m ago</span>
+            </div>
           </article>
-          <article>
-            Rizky Hasanuddin sent you a private message 5 days ago
-            <p>
-              Hello, thanks for setting up the Chess Club. I've been a member
-              for a few weeks now and I'm already having lots of fun and
-              improving my game.
-            </p>
-          </article>
-          <article>Kimberly Smith commented on your picture 1 week ago</article>
+          <!-- 3th message -->
+          <article class="message new f-row">
+            <img
+              class="img"
+              src="images/avatar-jacob-thompson.webp"
+              alt="Jacob avatar"
+            />
+            <div class="text">
+              <a class="user" href="#"> Jacob Thompson</a> has joined your group
+              <a class="post" a href="#">Chess Club</a>
+              <div class="dot"></div>
 
-          <article>
-            Nathan Peterson reacted to your recent post 5 end-game strategies to
-            increase your win rate 2 weeks ago
+              <span class="time">1 day ago</span>
+            </div>
           </article>
+          <!-- 4th message -->
+          <article class="message f-row">
+            <img
+              class="img"
+              src="images/avatar-rizky-hasanuddin.webp"
+              alt="Rizky avatar"
+            />
+            <div class="text">
+              <a class="user" href="#"> Rizky Hasanuddin</a> send you private
+              message
+              <span class="time">5 day ago</span>
+              <p class="private-mess">
+                Hello, thanks for setting up the Chess Club. I've been a member
+                for a few weeks now and I'm already having lots of fun and
+                improving my game.
+              </p>
+            </div>
+          </article>
+          <!-- 5th message -->
+          <article class="message f-row">
+            <img
+              class="img"
+              src="images/avatar-kimberly-smith.webp"
+              alt="Kimberly avatar"
+            />
+            <div class="text">
+              <div class="comment f-row">
+                <div class="left">
+                  <a class="user" href="#"> Kimberly Smith</a> commented on your
+                  picture
+                  <span class="time">1 week ago</span>
+                </div>
+                <img class="picture" src="images/image-chess.webp" />
+              </div>
+            </div>
+          </article>
+          <!-- 6th message -->
+          <article class="message f-row">
+            <img
+              class="img"
+              src="images/avatar-nathan-peterson.webp"
+              alt="Nathan avatar"
+            />
+            <div class="text">
+              <a class="user" href="#"> Nathan Peterson</a> reacted to your
+              recent post
+              <a class="post" href="#"
+                >5 end-game strategies to increase your win rate</a
+              >
+              <span class="time"> 2 weeks ago</span>
+            </div>
+          </article>
+          <!-- 7th message -->
+          <article class="message f-row">
+            <img
+              class="img"
+              src="images/avatar-anna-kim.webp"
+              alt="Anna avatar"
+            />
+            <div class="text">
+              <a class="user" href="#">Anna Kim</a> left the group
+              <a class="post" href="#">Chees Club</a>
 
-          <article>Anna Kim left the group Chess Club 2 weeks ago</article>
+              <span class="time">2 weeks ago</span>
+            </div>
+          </article>
         </section>
       </div>
     </main>
-    <div class="attribution">
+    <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+      >. Coded by <a href="#">Adam M</a>.
+    </footer>
   </body>
 </html>
