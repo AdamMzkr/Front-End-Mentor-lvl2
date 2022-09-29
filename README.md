@@ -9,7 +9,7 @@ All my Front-End Mentor challenge solutions
 - See live [Expenses chart component](https://adammzkr.github.io/Front-End-Mentor-lvl2/expenses-chart-component/index.html)
 - Repo [Expenses chart component CODE](https://github.com/AdamMzkr/Front-End-Mentor-lvl2/tree/main/expenses-chart-component)
 
-### #2 Notifications page
+### #3 Notifications page
 - See live [Notifications page](https://adammzkr.github.io/Front-End-Mentor-lvl2/notificatios-page/index.html)
 - Repo [Notifications page CODE](https://github.com/AdamMzkr/Front-End-Mentor-lvl2/tree/main/notificatios-page)
 
