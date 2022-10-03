@@ -26,6 +26,18 @@
       .offcanvas {
         width: 15rem !important;
       }
+      .hero {
+        height: 50rem;
+      }
+      .hero-image {
+        background: url(images/image-hero-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 20rem;
+      }
+      main {
+        height: 100%;
+      }
     </style>
   </head>
   <body>
@@ -105,8 +117,8 @@
 
     <main>
       <div class="container">
-        <div class="row">
-          <div class="col">
+        <div class="row hero d-flex">
+          <div class="col-12 col-lg-6 order-2 order-lg-1">
             <h1 class="fw-bold fs-1 my-5">Make remote work</h1>
             <p class="fs-4">
               Get your team in sync, no matter your location. Streamline
@@ -114,7 +126,7 @@
             </p>
             <button type="button" class="btn btn-dark">Learn more</button>
           </div>
-          <div class="col my-5 fs-1">right</div>
+          <div class="hero-image col-12 col-lg-6 order-1 order-lg-2"></div>
         </div>
       </div>
     </main>
