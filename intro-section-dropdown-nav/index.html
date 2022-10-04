@@ -15,35 +15,15 @@
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-      .offcanvas {
-        width: 15rem !important;
-      }
-      .hero {
-        height: 50rem;
-      }
-      .hero-image {
-        background: url(images/image-hero-mobile.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 20rem;
-      }
-      main {
-        height: 100%;
-      }
-    </style>
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
+    <!-- navigation start -->
     <nav class="navbar bg-light navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand logo fw-bold fs-1" href="#">snap</a>
+        <a class="navbar-brand logo fw-bold fs-1" href="#"
+          ><img src="images/logo.svg" alt="logo"
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -81,10 +61,39 @@
                   Features
                 </a>
                 <ul class="dropdown-menu border-0">
-                  <li><a class="dropdown-item" href="#">Todo List</a></li>
-                  <li><a class="dropdown-item" href="#">Calendar</a></li>
-                  <li><a class="dropdown-item" href="#">Reminders</a></li>
-                  <li><a class="dropdown-item" href="#">Planning</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><img class="icon" src="images/icon-todo.svg" alt="" />
+                      Todo List</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><img
+                        class="icon"
+                        src="images/icon-calendar.svg"
+                        alt=""
+                      />Calendar</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><img
+                        class="icon"
+                        src="images/icon-reminders.svg"
+                        alt=""
+                      />Reminders</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><img
+                        class="icon"
+                        src="images/icon-planning.svg"
+                        alt=""
+                      />Planning</a
+                    >
+                  </li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -114,19 +123,54 @@
         </div>
       </div>
     </nav>
+    <!-- navigation end -->
 
     <main>
       <div class="container">
         <div class="row hero d-flex">
-          <div class="col-12 col-lg-6 order-2 order-lg-1">
-            <h1 class="fw-bold fs-1 my-5">Make remote work</h1>
-            <p class="fs-4">
+          <!-- start left section -->
+          <section
+            class="d-flex text-center flex-column content col-12 col-lg-8 order-2 order-lg-1"
+          >
+            <h1 class="fw-bold my-4">Make remote work</h1>
+            <p class="px-2">
               Get your team in sync, no matter your location. Streamline
               processes, create team rituals, and watch productivity soar.
             </p>
             <button type="button" class="btn btn-dark">Learn more</button>
+            <div class="clients my-5 mx-2">
+              <div class="row">
+                <img
+                  class="col-3 p-3"
+                  src="images/client-databiz.svg"
+                  alt="clients "
+                />
+                <img
+                  class="col-3"
+                  src="images/client-audiophile.svg"
+                  alt="clients "
+                />
+                <img
+                  class="col-3 p-3"
+                  src="images/client-meet.svg"
+                  alt="clients "
+                />
+                <img
+                  class="col-3 p-3"
+                  src="images/client-maker.svg"
+                  alt="clients "
+                />
+              </div>
+            </div>
+          </section>
+          <!-- end left section -->
+          <div class="col-12 col-lg-4 order-1 order-lg-2">
+            <img
+              class="hero-image img-fluid"
+              src="images/image-hero-mobile.png"
+              alt="hero image"
+            />
           </div>
-          <div class="hero-image col-12 col-lg-6 order-1 order-lg-2"></div>
         </div>
       </div>
     </main>

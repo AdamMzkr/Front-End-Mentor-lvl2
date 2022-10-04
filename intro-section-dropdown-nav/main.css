@@ -1,0 +1,32 @@
+.offcanvas {
+  width: 15rem !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2rem !important;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.btn {
+  width: 8em;
+  margin: 1rem auto;
+}
+.icon {
+  margin: 0 0.5rem;
+}
+@media screen and (min-width: 992px) {
+  .hero-image {
+    content: url(images/image-hero-desktop.png) !important;
+  }
+}
