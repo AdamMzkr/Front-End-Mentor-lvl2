@@ -1,4 +1,3 @@
-[see live] -->(https://adammzkr.github.io/Front-End-Mentor-lvl2/intro-section-dropdown-nav/index.html)
 # Frontend Mentor lv2 - Intro section with dropdown navigation
 
 This is a solution to the [Intro section with dropdown navigation](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5). 
