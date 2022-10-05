@@ -1,11 +1,24 @@
-.offcanvas {
-  width: 15rem !important;
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+/* define colors */
+:root {
+  --almostWhite: hsl(0, 0%, 98%);
+  --mediumGray: hsl(0, 0%, 41%);
+  --almostBlack: hsl(0, 0%, 8%);
 }
-
+/* reset padding and margin in all elemants */
 * {
   margin: 0;
   padding: 0;
 }
+body {
+  color: var(--almostBlack);
+  background-color: var(--almostWhite);
+  font-family: "Epilogue", sans-serif;
+}
+.offcanvas {
+  width: 20rem !important;
+}
+/*style main clases and tags on mobile view*/
 
 .content {
   text-align: center;
@@ -17,14 +30,11 @@ br {
 h1 {
   font-size: 2rem !important;
 }
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
+p {
+  color: var(--mediumGray);
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
-  text-decoration: none;
+.logo {
+  padding: 0 5rem 0 0;
 }
 .btn {
   width: 8em;
@@ -37,6 +47,10 @@ h1 {
   background-color: white !important;
   color: black !important;
 }
+
+.dropdown-menu {
+  box-shadow: 0.1rem 0.1rem 1rem var(--mediumGray);
+}
 .login-nav {
   text-align: center;
 }
@@ -46,9 +60,26 @@ h1 {
   padding: 0.25rem 0.75rem;
   border-radius: 0.75rem;
 }
+#register:hover {
+  background-color: var(--almostBlack);
+  color: var(--almostWhite);
+}
 .icon {
   margin: 0 0.5rem;
 }
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 3rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+/*style main clases and tags on desktop view*/
+
 @media screen and (min-width: 992px) {
   .content {
     text-align: left;
