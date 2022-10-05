@@ -7,6 +7,13 @@
   padding: 0;
 }
 
+.content {
+  text-align: center;
+}
+br {
+  display: none;
+}
+
 h1 {
   font-size: 2rem !important;
 }
@@ -17,15 +24,49 @@ h1 {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+  text-decoration: none;
 }
 .btn {
   width: 8em;
   margin: 1rem auto;
+  border-radius: 0.75rem !important;
+  transition: 0.25s;
+}
+.btn:hover {
+  border: 1px solid black !important;
+  background-color: white !important;
+  color: black !important;
+}
+.login-nav {
+  text-align: center;
+}
+#register {
+  margin: 0 0.75rem;
+  border: 1px solid black;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.75rem;
 }
 .icon {
   margin: 0 0.5rem;
 }
 @media screen and (min-width: 992px) {
+  .content {
+    text-align: left;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  br {
+    display: block;
+  }
+  .btn {
+    margin: 1rem 0;
+  }
+  h1 {
+    font-size: 5rem !important;
+    padding: 2rem 0;
+    text-align: left;
+  }
   .hero-image {
     content: url(images/image-hero-desktop.png) !important;
   }
