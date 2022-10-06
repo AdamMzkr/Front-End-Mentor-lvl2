@@ -1,0 +1,90 @@
+:root {
+  --blue: hsl(246, 80%, 60%);
+
+  --lightRed/*(work)*/: hsl(15, 100%, 70%);
+  --softBlue/*(play)*/: hsl(195, 74%, 62%);
+  --lightRed/*(study)*/: hsl(348, 100%, 68%);
+  --limeGreen/*(exercise)*/: hsl(145, 58%, 55%);
+  --violet/*(social)*/: hsl(264, 64%, 52%);
+  --softOrange/*(self care)*/: hsl(43, 84%, 65%);
+
+  /* ### Neutral */
+
+  --veryDarkBlue: hsl(226, 43%, 10%);
+  --darkBlue: hsl(235, 46%, 20%);
+  --desaturatedBlue: hsl(235, 45%, 61%);
+  --paleBlue: hsl(236, 100%, 87%);
+  --white: hsl(255 100% 100%);
+}
+body {
+  font-family: sans-serif;
+  background-color: var(--veryDarkBlue);
+  color: var(--white);
+}
+section {
+  border: 1px solid black;
+  padding: 1rem;
+  background-color: var(--darkBlue);
+}
+.draft {
+  display: none;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.activity {
+  margin: 1rem;
+  border-radius: 0.5rem;
+}
+.dot {
+  display: block;
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+.activ-name {
+  font-size: 1rem;
+}
+.activ-tilme {
+  font-size: 2rem;
+}
+section .container {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#user-data .container {
+  padding: 1rem rem;
+  border: 1px solid blue;
+}
+.avatar {
+  margin: 0 1.5rem;
+  width: 4em;
+  height: 4em;
+  background-color: blue;
+  border-radius: 50%;
+}
+.time ul {
+  padding: 0.5rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
