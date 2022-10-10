@@ -70,23 +70,36 @@ main {
 }
 /*end grid*/
 /*styled section*/
+#user-data {
+  background-color: var(--blue);
+  border-radius: 0.5em;
+}
 #user-data .container {
-  padding: 1rem;
+  padding: 2rem 1.5rem;
 }
 .avatar {
   margin: 0 1.5rem;
   width: 4em;
   height: 4em;
-  background-color: blue;
+  background-color: var(--limeGreen);
   border-radius: 50%;
 }
+.time {
+  padding: 1.75rem 0;
+}
 .time ul {
-  padding: 0.5rem;
   list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
+}
+li {
+  color: var(--blue);
+}
+.active {
+  color: var(--white);
+  font-weight: 600;
 }
 .header {
   position: relative;
@@ -96,17 +109,24 @@ main {
   z-index: -1;
 }
 h1 {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 h1 span {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   display: block;
+}
+.right h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--blue);
 }
 .activity {
   margin: 1rem 1rem 3rem 1rem;
   border-radius: 0.5rem;
 }
 .dot {
+  margin: -1rem 0 1rem 0;
   display: block;
   font-size: 1.5rem;
   text-align: right;
@@ -114,9 +134,11 @@ h1 span {
 
 .activ-name {
   font-size: 1rem;
+  margin: 0.25rem 0;
 }
 .activ-time {
-  font-size: 2rem;
+  font-size: 1.75rem;
+  font-weight: 300;
 }
 section .container {
   padding: 1.5rem;
