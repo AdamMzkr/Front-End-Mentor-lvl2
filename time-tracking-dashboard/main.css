@@ -35,6 +35,7 @@ main {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .flex {
@@ -201,17 +202,21 @@ section {
 }
 
 @media only screen and (min-width: 900px) {
+  h1 {
+    font-size: 2rem;
+    padding: 0 5rem 0 0;
+  }
   .avatar {
     margin: 0;
     padding: 0;
   }
   .flex {
     flex-direction: column;
-    justify-content: flex-start;
+    align-items: flex-start;
   }
   #user-info {
     margin: -1rem 1rem 3rem 1rem;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     grid-area: u-info;
   }
   main {
@@ -227,5 +232,22 @@ section {
   }
   .activity .container {
     padding: 3rem 1rem;
+  }
+  section {
+    padding: 1rem 0;
+    max-width: 15rem;
+  }
+  .left {
+    width: 5rem;
+  }
+  #user-data .container {
+    margin: -0.75rem 0 0 0;
+    padding: 3rem 2rem;
+  }
+  .time ul {
+    flex-direction: column;
+  }
+  .time ul li {
+    margin: 0.75rem 2rem;
   }
 }
