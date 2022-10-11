@@ -28,12 +28,16 @@ body {
 }
 main {
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 * {
   margin: 0;
   padding: 0;
 }
-.flex-center {
+
+.flex {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +51,7 @@ main {
 }
 #user-info {
   margin: 1rem 1rem 3rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   grid-area: u-info;
 }
 #work {
@@ -72,7 +76,7 @@ main {
 /*styled section*/
 #user-data {
   background-color: var(--blue);
-  border-radius: 0.5em;
+  border-radius: 1rem;
 }
 #user-data .container {
   padding: 2rem 1.5rem;
@@ -95,41 +99,43 @@ main {
   width: 100%;
 }
 li {
-  color: var(--blue);
+  color: var(--paleBlue);
+  cursor: pointer;
 }
+li:hover {
+  color: var(--white);
+}
+
 .active {
   color: var(--white);
   font-weight: 600;
 }
-.header {
-  position: relative;
-  height: 3rem;
-  margin-top: -2rem;
-  border-radius: 0.5rem;
-  z-index: -1;
-}
+
 h1 {
+  margin: 1rem 0 0 0;
   font-size: 1.5rem;
   font-weight: 400;
 }
 h1 span {
   font-size: 0.9rem;
   display: block;
+  color: var(--paleBlue);
 }
 .right h3 {
   font-size: 1rem;
   font-weight: 400;
-  color: var(--blue);
+  color: var(--paleBlue);
 }
 .activity {
   margin: 1rem 1rem 3rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 }
 .dot {
-  margin: -1rem 0 1rem 0;
-  display: block;
-  font-size: 1.5rem;
-  text-align: right;
+  margin: 0rem 0rem 1rem 5.5rem;
+  width: 2rem;
+  height: 1rem;
+  background-image: url(images/icon-ellipsis.svg);
+  background-repeat: no-repeat;
 }
 
 .activ-name {
@@ -140,30 +146,47 @@ h1 span {
   font-size: 1.75rem;
   font-weight: 300;
 }
-section .container {
+.activ-container {
   padding: 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+.header {
+  position: relative;
+  height: 4rem;
+  margin-top: -2.5rem;
+  border-radius: 1rem;
+  z-index: -1;
+  background-size: 4.25rem;
+  background-repeat: no-repeat;
+  background-position: 14.5rem -0.2rem;
+}
 /*defined colors or each header*/
+
 #work header {
   background-color: var(--lightOrange);
+  background-image: url(images/icon-work.svg);
 }
 #play header {
   background-color: var(--softBlue);
+  background-image: url(images/icon-play.svg);
 }
 #study header {
   background-color: var(--lightRed);
+  background-image: url(images/icon-study.svg);
 }
 #exercise header {
   background-color: var(--limeGreen);
+  background-image: url(images/icon-exercise.svg);
 }
 #social header {
   background-color: var(--violet);
+  background-image: url(images/icon-social.svg);
 }
 #self-care header {
   background-color: var(--softOrange);
+  background-image: url(images/icon-self-care.svg);
 }
 section {
   background-color: var(--darkBlue);
@@ -178,6 +201,14 @@ section {
 }
 
 @media only screen and (min-width: 900px) {
+  .avatar {
+    margin: 0;
+    padding: 0;
+  }
+  .flex {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
   #user-info {
     margin: -1rem 1rem 3rem 1rem;
     border-radius: 0.5rem;
