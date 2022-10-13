@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
 /* defined colors */
 :root {
   --blue: hsl(246, 80%, 60%);
@@ -25,6 +26,8 @@ body {
   font-family: sans-serif;
   background-color: var(--veryDarkBlue);
   color: var(--white);
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
 }
 main {
   height: 100%;
@@ -109,7 +112,7 @@ li:hover {
 
 .active {
   color: var(--white);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 h1 {
@@ -122,7 +125,7 @@ h1 span {
   display: block;
   color: var(--paleBlue);
 }
-.right h3 {
+h3 {
   font-size: 1rem;
   font-weight: 400;
   color: var(--paleBlue);
@@ -137,11 +140,13 @@ h1 span {
   height: 1rem;
   background-image: url(images/icon-ellipsis.svg);
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .activ-name {
   font-size: 1rem;
   margin: 0.25rem 0;
+  letter-spacing: 0.1rem;
 }
 .activ-time {
   font-size: 1.75rem;
@@ -150,12 +155,17 @@ h1 span {
 .activ-container {
   padding: 1.5rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cont-title,
+.details {
+  display: flex;
   justify-content: space-between;
 }
 .header {
   position: relative;
-  height: 4rem;
+  height: 5rem;
   margin-top: -2.5rem;
   border-radius: 1rem;
   z-index: -1;
@@ -202,23 +212,6 @@ section {
 }
 
 @media only screen and (min-width: 900px) {
-  h1 {
-    font-size: 2rem;
-    padding: 0 5rem 0 0;
-  }
-  .avatar {
-    margin: 0;
-    padding: 0;
-  }
-  .flex {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #user-info {
-    margin: -1rem 1rem 3rem 1rem;
-    border-radius: 1rem;
-    grid-area: u-info;
-  }
   main {
     height: 95vh;
     padding: 0 3rem;
@@ -230,24 +223,66 @@ section {
       "u-info work study soc"
       "u-info play exr self";
   }
+
+  .header {
+    height: 3rem;
+    margin-top: -1.75rem;
+    background-size: 3.25rem;
+    background-repeat: no-repeat;
+    background-position: 10.5rem -0.2rem;
+  }
+  #user-info {
+    margin: -1rem 1rem 3rem 1rem;
+    border-radius: 1rem;
+    grid-area: u-info;
+  }
+  #user-data .container {
+    padding: 1rem 2rem 5rem 2rem;
+  }
+  h1 {
+    font-size: rem;
+    padding: 0 5rem 0 0;
+  }
+  .avatar {
+    margin: 0;
+    padding: 0;
+  }
+  .activ-time {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+  }
+  .flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #user-data h1 {
+    padding: 1rem 0;
+    font-size: 2.25rem;
+  }
+
   .activity .container {
     padding: 3rem 1rem;
   }
   section {
-    padding: 1rem 0;
     max-width: 15rem;
   }
   .left {
     width: 5rem;
   }
-  #user-data .container {
-    margin: -0.75rem 0 0 0;
-    padding: 3rem 2rem;
-  }
+
   .time ul {
     flex-direction: column;
   }
   .time ul li {
     margin: 0.75rem 2rem;
+  }
+  .activ-container {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .details {
+    flex-direction: column;
   }
 }
