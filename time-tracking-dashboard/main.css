@@ -120,7 +120,7 @@ h1 {
   font-size: 1.5rem;
   font-weight: 400;
 }
-h1 span {
+#user-data h1 span {
   font-size: 0.9rem;
   display: block;
   color: var(--paleBlue);
@@ -135,7 +135,6 @@ h3 {
   border-radius: 1rem;
 }
 .dot {
-  margin: 0rem 0rem 1rem 5.5rem;
   width: 2rem;
   height: 1rem;
   background-image: url(images/icon-ellipsis.svg);
