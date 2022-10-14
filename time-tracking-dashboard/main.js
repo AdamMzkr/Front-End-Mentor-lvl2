@@ -103,28 +103,63 @@ const DATA = [
   },
 ];
 
-const dailyArrCur = [];
+const dailyArrCurrent = [];
 const dailyArrPrev = [];
 
+const weekArrCurrent = [];
+const weekArrayPrev = [];
+
+const monthArrayCurrent = [];
+const monthArrayPrev = [];
+
 DATA.forEach((el) => {
-  dailyArrCur.push(el.timeframes.daily.current);
+  dailyArrCurrent.push(el.timeframes.daily.current);
   dailyArrPrev.push(el.timeframes.daily.previous);
+  weekArrCurrent.push(el.timeframes.weekly.current);
+  weekArrayPrev.push(el.timeframes.weekly.previous);
+  monthArrayCurrent.push(el.timeframes.monthly.current);
+  monthArrayPrev.push(el.timeframes.monthly.previous);
 });
 
-const currentArr = document.querySelectorAll(".current");
-const lastArr = document.querySelectorAll(".last");
+const arrayElCurrent = document.querySelectorAll(".current");
+const arrayElLast = document.querySelectorAll(".last");
 
 const dayOp = document.querySelector("#day");
+const weekOp = document.querySelector("#week");
+const monthOp = document.querySelector("#month");
 
 /*set displayed dafault value */
-for (let i = 0; i < currentArr.length; i++) {
-  currentArr[i].textContent = dailyArrCur[i];
-  lastArr[i].textContent = dailyArrPrev[i];
+for (let i = 0; i < arrayElCurrent.length; i++) {
+  arrayElCurrent[i].textContent = dailyArrCurrent[i];
+  arrayElLast[i].textContent = dailyArrPrev[i];
 }
 
-// dayOp.addEventListener("click", () => {
-//   for (let i = 0; i < currentArr.length; i++) {
-//     currentArr[i].textContent = dailyArrCur[i];
-//     lastArr[i].textContent = dailyArrPrev[i];
-//   }
-// });
+dayOp.addEventListener("click", () => {
+  for (let i = 0; i < arrayElCurrent.length; i++) {
+    arrayElCurrent[i].textContent = dailyArrCurrent[i];
+    arrayElLast[i].textContent = dailyArrPrev[i];
+    dayOp.classList.add("active");
+    weekOp.classList.remove("active");
+    monthOp.classList.remove("active");
+  }
+});
+
+weekOp.addEventListener("click", () => {
+  for (let i = 0; i < arrayElCurrent.length; i++) {
+    arrayElCurrent[i].textContent = weekArrCurrent[i];
+    arrayElLast[i].textContent = weekArrayPrev[i];
+    weekOp.classList.add("active");
+    dayOp.classList.remove("active");
+    monthOp.classList.remove("active");
+  }
+});
+
+monthOp.addEventListener("click", () => {
+  for (let i = 0; i < arrayElCurrent.length; i++) {
+    arrayElCurrent[i].textContent = monthArrayCurrent[i];
+    arrayElLast[i].textContent = monthArrayPrev[i];
+    monthOp.classList.add("active");
+    weekOp.classList.remove("active");
+    dayOp.classList.remove("active");
+  }
+});
