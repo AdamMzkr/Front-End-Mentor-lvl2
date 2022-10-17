@@ -1,0 +1,83 @@
+:root {
+  --violet: hsl(263, 55%, 52%);
+  --grayishBlue: hsl(217, 19%, 35%);
+  --blackishBlue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+
+  --lightGray: hsl(0, 0%, 81%);
+  --lightgrayishBlue: hsl(210, 46%, 95%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  color: var(--white);
+  background-color: var(--lightgrayishBlue);
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.container {
+  width: 20rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "dan" "joan" "jean" "pat" "kir";
+}
+.testimonial {
+  margin: 1em;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+#dan {
+  grid-area: dan;
+  background-color: var(--violet);
+}
+
+#joan {
+  grid-area: joan;
+  background-color: var(--grayishBlue);
+}
+
+#jean {
+  grid-area: jean;
+  background-color: var(--white);
+  color: var(--grayishBlue);
+}
+
+#pat {
+  grid-area: pat;
+  background-color: var(--blackishBlue);
+}
+
+#kir {
+  grid-area: kir;
+  background-color: var(--white);
+  color: var(--grayishBlue);
+}
+
+@media only screen and (min-width: 800px) {
+  main {
+    height: 95vh;
+  }
+  .container {
+    width: 70rem;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "dan dan joan kir"
+      "jean pat pat kir";
+  }
+}
