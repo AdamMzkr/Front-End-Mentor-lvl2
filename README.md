@@ -17,8 +17,10 @@ All my Front-End Mentor challenge solutions
 - See live [Intro section dropdown navigation ](https://adammzkr.github.io/Front-End-Mentor-lvl2/intro-section-dropdown-nav/index.html)
 - Repo [Intro section dropdown navigation CODE](https://github.com/AdamMzkr/Front-End-Mentor-lvl2/tree/main/intro-section-dropdown-nav)
 
-### #5 Time tracking dashboard--> in progress....
+### #5 Time tracking dashboard
+- See live [Time tracking dashboard](https://adammzkr.github.io/Front-End-Mentor-lvl2/time-tracking-dashboard/index.html)
 - Repo [Time tracking dashboard CODE](https://github.com/AdamMzkr/Front-End-Mentor-lvl2/tree/main/time-tracking-dashboard)
+- 
 
 
 
