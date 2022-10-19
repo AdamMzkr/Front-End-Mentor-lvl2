@@ -11,8 +11,7 @@ This is a solution to the [Time tracking dashboard](https://www.frontendmentor.i
 - [Author](#author)
 
 ### The challenge
-
-This challenge was to build out this Stats preview card component and get it looking as close to the design as possible. 
+Your challenge is to build out this dashboard and get it looking as close to the design as possible.
 
 Your users should be able to:
 - View the optimal layout for the site depending on their device's screen size
