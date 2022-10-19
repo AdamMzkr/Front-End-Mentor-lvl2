@@ -1,5 +1,4 @@
-live site --> (https://adammzkr.github.io/Front-End-Mentor-lvl2/time-tracking-dashboard/index.html)
-# Frontend Mentor lv2 - Notifications page
+# Frontend Mentor lv2 - Time tracking dashboard
 
 This is a solution to the [Time tracking dashboard](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw). 
 
