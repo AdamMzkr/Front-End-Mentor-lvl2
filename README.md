@@ -20,7 +20,11 @@ All my Front-End Mentor challenge solutions
 ### #5 Time tracking dashboard
 - See live [Time tracking dashboard](https://adammzkr.github.io/Front-End-Mentor-lvl2/time-tracking-dashboard/index.html)
 - Repo [Time tracking dashboard CODE](https://github.com/AdamMzkr/Front-End-Mentor-lvl2/tree/main/time-tracking-dashboard)
-- 
+
+### #6 Testimonials grid
+- See live [Testimonials grid](https://adammzkr.github.io/Front-End-Mentor-lvl2/testimonials-grid/index.html)
+- Repo [Testimonials grid CODE](https://github.com/AdamMzkr/Front-End-Mentor-lvl2/tree/main/testimonials-grid)
+
 
 
 
